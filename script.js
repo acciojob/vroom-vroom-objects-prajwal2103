@@ -15,6 +15,9 @@ SportsCar.prototype.getTopSpeed=function(){
 }
 SportsCar.prototype=Object.create(Car.prototype);
 SportsCar.prototype.constructor=SportsCar;
+let Vehicle=new SportsCar("Ferrari", "Testarossa", 200)
+console.log(Vehicle.getTopSpeed());
+
 
 // Do not change the code below
 window.Car = Car;
