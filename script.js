@@ -10,13 +10,12 @@ function SportsCar(make, model, topSpeed) {
 	Car.call(this,make,model)
 	this.topSpeed=topSpeed;
 }
+SportsCar.prototype=Object.create(Car.prototype);
+SportsCar.prototype.constructor=SportsCar;
+
 SportsCar.prototype.getTopSpeed=function(){
 	return this.topSpeed;
 }
-SportsCar.prototype=Object.create(Car.prototype);
-SportsCar.prototype.constructor=SportsCar;
-let Vehicle=new SportsCar("Ferrari", "Testarossa", 200)
-console.log(Vehicle.getTopSpeed());
 
 
 // Do not change the code below
